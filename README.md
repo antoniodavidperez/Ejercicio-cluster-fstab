@@ -3,12 +3,9 @@
 Lo que hacemos en crear la máquina virtual sin disco duro ya que usaremos un iso con el que arrancaremos el SO live. El siguiente paso es iniciar los nodos, para ello lo que haremos será crear dos máquinas virtuales las cuales arrancarán desde la tarjeta de red, por lo que tampoco les hace falta disco duro. Nos tenemos que asegurar que tanto los nodos como la maquina principal están en la misma red. Si todo los anterior es correcto una vez iniciados los nodos se configuran automáticamente y se enlazan al cluster.
 ![cluster.PNG](./cluster.PNG)
 
-Creamos el raid 5 para el servidor web y ftp.
-![raid5_servidorwebyftp.PNG](./raid5_servidorwebyftp.PNG)
-
-## Creación del servidor DNS
-Declarar las zonas de los sitios.
-![named.conf.local.PNG](./named.conf.local.PNG)
+## Creación de trabajos con cron
+Lo que hacemos es editar con nano el /etc/crontab y escribimos lo siquiente:
+![crontab.PNG](./crontab.PNG)
 
 Configurar los servidores DNS a los que va a acudir nuestro servidor en el caso de que nos conozca la IP del nombre por el que le están preguntando.
 ![named.conf.options.PNG](./named.conf.options.PNG)
