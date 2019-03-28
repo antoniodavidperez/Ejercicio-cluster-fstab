@@ -24,7 +24,7 @@ Hacemos los mismo con las tres particiones del segundo disco y observamos el res
 ![2d1p.PNG](./2d1p.PNG)
 ![2d2p.PNG](./2d2p.PNG)
 ![2d3p.PNG](./2d3p.PNG)
-![resultadod2.PNG](./resultadod2.PNG)
+![resultado2.PNG](./resultado2.PNG)
 
 Para poder configurar que las tres particiones del segundo disco se monten automáticamente cuando se inicia el SO lo que tenemos que hacer es ver los UUID de las particiones y para eso las tenemos que montar manualmente primero y luego la podremos ver como se muestra en la imagen:
 ![uuid.PNG](./uuid.PNG)
