@@ -7,25 +7,20 @@ Lo que hacemos en crear la máquina virtual sin disco duro ya que usaremos un is
 Lo que hacemos es editar con nano el /etc/crontab y escribimos lo siquiente:
 ![crontab.PNG](./crontab.PNG)
 
-Configurar los servidores DNS a los que va a acudir nuestro servidor en el caso de que nos conozca la IP del nombre por el que le están preguntando.
-![named.conf.options.PNG](./named.conf.options.PNG)
+## Creación de particiones con fdisk
+Lo primero que tenemos que hacer es instalar fdisk. Una vez instalado tenemos que ver como se llaman los discos sin formato que ceremos particionar, en mi caso son los doss últimos de la siguiente imagen.
+![discos_duros.PNG](./discos_duros.PNG)
 
-Crear las zonas directas de cada sitio donde se relacionan las IP con los nombres.
-![rd.sitioa.com.PNG](./rd.sitioa.com.PNG)
-![rd.sitiob.net.PNG](./rd.sitiob.net.PNG)
-![rd.sitioc.net.PNG](./rd.sitioc.net.PNG)
+Con el comando fdisk y el disco duro entramos las herramientas de fdisk y lo que hacemos en la siguiente imagen es crear una nueva tabla de particiones con 'o', seguido de la creación de la primera particion con 'p' y despues se le ponen los parametros necesarios para crear la partición.
+![1d1p.PNG](./1d1p.PNG)
 
-## Creación del servidor Apache
-Crear los host virtuales, para ello hay que crear primero la estructura de carpetas y luego configurar los archivos.
-![sitioa.com.conf.PNG](./sitioa.com.conf.PNG)
-![sitiob.net.conf.PNG](./sitiob.net.conf.PNG)
-![sitioc.net.conf.PNG](./sitioc.net.conf.PNG)
+Con la segunda particion hacemos lo mismo solo que al final con el parametro 't' lo que hacemos es especificarle en tipo de almacenamiento.
+![1d2p.PNG](./1d2p.PNG)
 
-## Comprobación desde el lado del cliente
-Comprobación de los host por el terminar de un cliente.
-![comprobacionHost.PNG](./comprobacionHost.PNG)
+Y como vemos en la siguiente imagen se han creado las dos particiones.
+![resultadod1.PNG](./resultadod1.PNG)
 
-Comprobación de los host en el navegador del cliente.
-![navegadorSitioa.PNG](./navegadorSitioa.PNG)
-![navegadorSitiob.PNG](./navegadorSitiob.PNG)
-![navegadorSitioc.PNG](./navegadorSitioc.PNG)
+Hacemos los mismo con las tres particiones del segundo disco y observamos el resultado.
+![2d1p.PNG](./2d1p.PNG)
+![2d2p.PNG](./2d2p.PNG)
+![2d3p.PNG](./2d3p.PNG)
