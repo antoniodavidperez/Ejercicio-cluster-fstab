@@ -24,3 +24,13 @@ Hacemos los mismo con las tres particiones del segundo disco y observamos el res
 ![2d1p.PNG](./2d1p.PNG)
 ![2d2p.PNG](./2d2p.PNG)
 ![2d3p.PNG](./2d3p.PNG)
+![resultadod2.PNG](./resultadod2.PNG)
+
+Para poder configurar que las tres particiones del segundo disco se monten automáticamente cuando se inicia el SO lo que tenemos que hacer es ver los UUID de las particiones y para eso las tenemos que montar manualmente primero y luego la podremos ver como se muestra en la imagen:
+![uuid.PNG](./uuid.PNG)
+
+Despues de obtener la información lo que tenemos que hacer es configurar el fstab con la uuid de la partición, además de la ruta donde se van a montar las particiones y algunos parámetros más como vemos a continuación:
+![fstab.PNG](./fstab.PNG)
+
+Después reiniciamos la máquina virtual y veremos que las particiones que hemos configurado se montan automáticamente al iniciarse el sistema.
+![comprobacionfstab.PNG](./comprobacionfstab.PNG)
